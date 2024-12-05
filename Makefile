@@ -6,8 +6,11 @@ all: $(BUILDDIR)/Makefile
 	git submodule update --init --recursive
 	cd $(BUILDDIR) && make
 
-$(BUILDDIR)/Makefile:
+$(BUILDDIR)/Makefile: | $(BUILDDIR)
 	cd $(BUILDDIR) && cmake ..
+
+$(BUILDDIR):
+	mkdir -p $@
 
 clean:
 	rm -rf $(BUILDDIR)/*
