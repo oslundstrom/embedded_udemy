@@ -1,0 +1,28 @@
+name: Build and upload artifact
+
+on:
+  push:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: make setup
+
+    - name: Build
+      run: make
+
+    - uses: actions/upload-artifact@v4
+      with:
+        # Artifact name
+        name: firmware
+        path: build/*.uf2
+        if-no-files-found: error
+        overwrite: true
