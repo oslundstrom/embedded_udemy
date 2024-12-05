@@ -11,13 +11,13 @@ int main() {
     stdio_init_all();
     while (true) {
         printf("Hello, world!\n");
-        printf("Size of char: %u", sizeof(char));
-        printf("Size of int: %u", sizeof(int));
-        printf("Size of short: %u", sizeof(short));
-        printf("Size of long: %u", sizeof(long));
-        printf("Size of long long: %u", sizeof(long long));
-        printf("Size of double: %u", sizeof(double));
-        printf("Size of float: %u", sizeof(float));
+        printf("Size of char: %u\n", sizeof(char));
+        printf("Size of int: %u\n", sizeof(int));
+        printf("Size of short: %u\n", sizeof(short));
+        printf("Size of long: %u\n", sizeof(long));
+        printf("Size of long long: %u\n", sizeof(long long));
+        printf("Size of double: %u\n", sizeof(double));
+        printf("Size of float: %u\n", sizeof(float));
         sleep_ms(5000);
     }
 }
