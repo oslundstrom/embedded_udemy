@@ -1,0 +1,1 @@
+Maybe use this for flashing [https://github.com/dgofman/rp_BOOTSEL-/blob/main/flash.py]
