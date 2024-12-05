@@ -1,10 +1,17 @@
 BUILDDIR = build
 
-.PHONY: all
-all: $(BUILDDIR)/hello_world.uf2
+.PHONY: all clean
+
+all: $(BUILDDIR)/Makefile
+	git submodule update --init --recursive
+	cd $(BUILDDIR) && make
 
 $(BUILDDIR)/Makefile:
 	cd $(BUILDDIR) && cmake ..
 
-$(BUILDDIR)/hello_world.uf2:
-	cd $(BUILDDIR) && make
+clean:
+	rm -rf $(BUILDDIR)/*
+
+setup:
+	git submodule update --init --recursive
+	sudo apt-get install libusb make cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential g++ libstdc++-arm-none-eabi-newlib
