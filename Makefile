@@ -14,4 +14,4 @@ clean:
 
 setup:
 	git submodule update --init --recursive
-	sudo apt-get install libusb make cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential g++ libstdc++-arm-none-eabi-newlib
+	sudo apt-get install make cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential g++ libstdc++-arm-none-eabi-newlib
