@@ -1,7 +1,7 @@
 
 
-main:
-	gcc main.c -o $@
+main: main.c
+	gcc $< -o $@
 
 run: main
 	./$<

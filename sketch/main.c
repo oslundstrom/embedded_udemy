@@ -1,11 +1,24 @@
 #include <stdio.h>
 
+#define MAXBUFFER 100
+
 int main(void)
 {
-	float a, b, c, avg;
-	int trash = NULL;
-	printf("Enter three space seperated numbers and press enter to get average\n>");
-	scanf("%f %f %f", &a, &b, &c);
-	avg = (a + b + c) / 3;
-	printf("Average: %f\n", avg);
+	int ints[MAXBUFFER];
+	int i = 0;
+	while (1) {
+		ints[i] = getchar();
+		if (ints[i] == '\n') {
+			ints[i] = '\0';
+			i = 0;
+			while (ints[i]) {
+				printf("%d-", ints[i]);
+				i++;
+			}
+			printf("\b \n");
+			return 0;
+		}
+		i++;
+	}
+
 }
