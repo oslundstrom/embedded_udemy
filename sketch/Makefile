@@ -1,7 +1,15 @@
+SRC := $(wildcard *.c)
+BINS := $(SRC:.c=)
 
+.PHONY: all
 
-main: main.c
+all: $(BINS)
+
+%: %.c
 	gcc $< -o $@
 
 run: main
 	./$<
+
+clean:
+	rm $(BINS)
