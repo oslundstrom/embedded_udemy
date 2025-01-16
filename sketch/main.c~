@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void)
+{
+	float a, b, c, avg;
+	int trash = NULL;
+	printf("Enter three space seperated numbers and press enter to get average\n>");
+	scanf("%f %f %f", &a, &b, &c, &trash);
+	if (trash) {
+		printf("Error, to much input\n");
+		exit(1);
+	}
+	avg = (a + b + c) / 3;
+	printf("Average: %f\n", avg);
+}
