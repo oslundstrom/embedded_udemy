@@ -3,7 +3,6 @@
 int main(void)
 {
 	float a, b, c, avg;
-	int trash = NULL;
 	printf("Enter three space seperated numbers and press enter to get average\n>");
 	scanf("%f %f %f", &a, &b, &c);
 	avg = (a + b + c) / 3;
