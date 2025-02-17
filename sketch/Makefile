@@ -6,7 +6,7 @@ BINS := $(SRC:.c=)
 all: $(BINS)
 
 %: %.c
-	gcc $< -o $@ -g -lm
+	gcc $< -o $@ -lm
 
 run: main
 	./$<
